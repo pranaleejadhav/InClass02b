@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InClass02b" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaW-Sx-Uhn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="okz-Yr-oQu">
+                                        <rect key="frame" x="20" y="40" width="335" height="283"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Enter first number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-ie-kyT">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="vCV-vY-zEN"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Enter second number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f89-zD-8Ts">
+                                                <rect key="frame" x="0.0" y="55" width="335" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result : 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHj-Bm-lo6">
+                                                <rect key="frame" x="0.0" y="110" width="335" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PE7-hb-Rmu">
+                                                <rect key="frame" x="0.0" y="165" width="335" height="29"/>
+                                                <segments>
+                                                    <segment title="Add"/>
+                                                    <segment title="Substract"/>
+                                                    <segment title="Multiply"/>
+                                                    <segment title="Divide"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="VJa-lD-GQ3"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV1-Ua-c6g">
+                                                <rect key="frame" x="0.0" y="208" width="335" height="30"/>
+                                                <state key="normal" title="Clear All"/>
+                                                <connections>
+                                                    <action selector="clearOp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3t-nj-UY9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INd-gy-jkG">
+                                                <rect key="frame" x="0.0" y="253" width="335" height="30"/>
+                                                <state key="normal" title="Perform Operation"/>
+                                                <connections>
+                                                    <action selector="calcNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAW-XF-G0U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="f89-zD-8Ts" firstAttribute="height" secondItem="Rnp-ie-kyT" secondAttribute="height" id="LC6-2e-QSh"/>
+                                            <constraint firstItem="SHj-Bm-lo6" firstAttribute="height" secondItem="Rnp-ie-kyT" secondAttribute="height" id="X32-GK-MOc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="okz-Yr-oQu" firstAttribute="leading" secondItem="TaW-Sx-Uhn" secondAttribute="leading" constant="20" id="ZDl-3v-SGF"/>
+                                    <constraint firstAttribute="bottom" secondItem="okz-Yr-oQu" secondAttribute="bottom" id="khD-xQ-8c2"/>
+                                    <constraint firstItem="okz-Yr-oQu" firstAttribute="top" secondItem="TaW-Sx-Uhn" secondAttribute="top" constant="40" id="yWG-9z-bua"/>
+                                    <constraint firstAttribute="trailing" secondItem="okz-Yr-oQu" secondAttribute="trailing" constant="20" id="zSJ-GN-1Dg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="okz-Yr-oQu" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" constant="-40" id="544-UV-M91"/>
+                            <constraint firstItem="TaW-Sx-Uhn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D0Z-YC-c6Z"/>
+                            <constraint firstItem="TaW-Sx-Uhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JmY-Fl-4EW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TaW-Sx-Uhn" secondAttribute="bottom" id="b07-8F-Wva"/>
+                            <constraint firstItem="TaW-Sx-Uhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nfH-DZ-fH7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fnumber" destination="Rnp-ie-kyT" id="Gf9-YA-0yg"/>
+                        <outlet property="resultLb" destination="SHj-Bm-lo6" id="qxf-sj-9WW"/>
+                        <outlet property="snumber" destination="f89-zD-8Ts" id="yUP-b1-Zk2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
